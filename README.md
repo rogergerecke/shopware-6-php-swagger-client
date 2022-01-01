@@ -32,7 +32,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "rogergerecke/shopware-6-php-swagger-client": "1.0.*"
+    "rogergerecke/shopware-6-php-swagger-client": "dev-main"
   }
 }
 ```
