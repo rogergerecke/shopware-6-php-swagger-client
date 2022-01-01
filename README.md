@@ -1,3 +1,11 @@
+# PHP Classe für Shopware 6.4.7.0
+
+Mit diesen classen kann man die Shopware API ansprechen.  Am besten über composer Installieren und
+so von der DI profitieren.
+
+
+
+
 # SwaggerClient-php
 This endpoint reference contains an overview of all endpoints comprising the Shopware Admin API.  For a better overview, all CRUD-endpoints are hidden by default. If you want to show also CRUD-endpoints add the query parameter `type=jsonapi`.
 
