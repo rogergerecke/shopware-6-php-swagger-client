@@ -37,7 +37,7 @@ namespace Swagger\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class FlowBulderActionsResponseInnerTest extends \PHPUnit_Framework_TestCase
+class FlowBulderActionsResponseInnerTest extends \PHPUnit\Framework\TestCase
 {
 
     /**

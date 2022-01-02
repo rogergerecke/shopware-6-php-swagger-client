@@ -37,7 +37,7 @@ namespace Swagger\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActionIndexBodyTest extends \PHPUnit_Framework_TestCase
+class ActionIndexBodyTest extends \PHPUnit\Framework\TestCase
 {
 
     /**

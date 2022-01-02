@@ -37,7 +37,7 @@ namespace Swagger\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class OauthTokenBodyTest extends \PHPUnit_Framework_TestCase
+class OauthTokenBodyTest extends \PHPUnit\Framework\TestCase
 {
 
     /**

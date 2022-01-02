@@ -1,22 +1,22 @@
-# DeadMessage
+# # DeadMessage
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  | [optional] 
-**original_message_class** | **string** |  | 
-**handler_class** | **string** |  | 
-**encrypted** | **bool** |  | 
-**error_count** | **int** |  | 
-**next_execution_time** | [**\DateTime**](\DateTime.md) |  | 
-**exception** | **string** |  | 
-**exception_message** | **string** |  | 
-**exception_file** | **string** |  | 
-**exception_line** | **int** |  | 
-**scheduled_task_id** | **string** |  | [optional] 
-**created_at** | [**\DateTime**](\DateTime.md) |  | 
-**updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**scheduled_task** | [**\Swagger\Client\Model\ScheduledTask**](ScheduledTask.md) |  | [optional] 
+**id** | **string** |  | [optional]
+**original_message_class** | **string** |  | [readonly]
+**handler_class** | **string** |  | [readonly]
+**encrypted** | **bool** |  | [readonly]
+**error_count** | **int** |  | [readonly]
+**next_execution_time** | **\DateTime** |  | [readonly]
+**exception** | **string** |  | [readonly]
+**exception_message** | **string** |  | [readonly]
+**exception_file** | **string** |  | [readonly]
+**exception_line** | **int** |  | [readonly]
+**scheduled_task_id** | **string** |  | [optional]
+**created_at** | **\DateTime** |  | [readonly]
+**updated_at** | **\DateTime** |  | [optional] [readonly]
+**scheduled_task** | [**\OpenAPI\Client\Model\ScheduledTask**](ScheduledTask.md) |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
