@@ -1,17 +1,17 @@
-# CurrencyCountryRounding
+# # CurrencyCountryRounding
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  | [optional] 
-**currency_id** | **string** |  | 
-**country_id** | **string** |  | 
-**item_rounding** | [**\Swagger\Client\Model\CurrencyItemRounding**](CurrencyItemRounding.md) |  | 
-**total_rounding** | [**\Swagger\Client\Model\CurrencyItemRounding**](CurrencyItemRounding.md) |  | 
-**created_at** | [**\DateTime**](\DateTime.md) |  | 
-**updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**currency** | [**\Swagger\Client\Model\Currency**](Currency.md) |  | [optional] 
-**country** | [**\Swagger\Client\Model\Country**](Country.md) |  | [optional] 
+**id** | **string** |  | [optional]
+**currency_id** | **string** |  |
+**country_id** | **string** |  |
+**item_rounding** | [**\OpenAPI\Client\Model\CurrencyItemRounding**](CurrencyItemRounding.md) |  |
+**total_rounding** | [**\OpenAPI\Client\Model\CurrencyItemRounding**](CurrencyItemRounding.md) |  |
+**created_at** | **\DateTime** |  | [readonly]
+**updated_at** | **\DateTime** |  | [optional] [readonly]
+**currency** | [**\OpenAPI\Client\Model\Currency**](Currency.md) |  | [optional]
+**country** | [**\OpenAPI\Client\Model\Country**](Country.md) |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

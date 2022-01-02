@@ -37,7 +37,7 @@ namespace Swagger\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AllOfsuccessLinksTest extends \PHPUnit_Framework_TestCase
+class AllOfsuccessLinksTest extends \PHPUnit\Framework\TestCase
 {
 
     /**

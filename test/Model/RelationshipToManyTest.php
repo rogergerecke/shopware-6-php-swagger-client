@@ -37,7 +37,7 @@ namespace Swagger\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RelationshipToManyTest extends \PHPUnit_Framework_TestCase
+class RelationshipToManyTest extends \PHPUnit\Framework\TestCase
 {
 
     /**
