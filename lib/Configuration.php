@@ -83,7 +83,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://redkitty.de/api';
+    protected $host = 'https://redkitty.de/api';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
