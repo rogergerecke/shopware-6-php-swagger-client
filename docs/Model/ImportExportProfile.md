@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **string** |  | [optional]
 **name** | **string** |  | [optional]
 **label** | **string** |  |
+**type** | **string** |  | [optional]
 **system_default** | **bool** |  | [optional]
 **source_entity** | **string** |  |
 **file_type** | **string** |  |

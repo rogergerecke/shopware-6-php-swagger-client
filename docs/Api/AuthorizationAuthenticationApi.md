@@ -1,6 +1,6 @@
 # OpenAPI\Client\AuthorizationAuthenticationApi
 
-All URIs are relative to http://redkitty.de/api.
+All URIs are relative to https://redkitty.de/api.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

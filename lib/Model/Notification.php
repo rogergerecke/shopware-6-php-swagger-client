@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomField
+ * Notification
  *
  * PHP version 7.3
  *
@@ -32,10 +32,10 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * CustomField Class Doc Comment
+ * Notification Class Doc Comment
  *
  * @category Class
- * @description Added since version: 6.0.0.0
+ * @description Added since version: 6.4.7.0
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -43,7 +43,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
+class Notification implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CustomField';
+    protected static $openAPIModelName = 'Notification';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,15 +61,16 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'name' => 'string',
-        'type' => 'string',
-        'config' => 'object',
-        'active' => 'bool',
-        'custom_field_set_id' => 'string',
+        'status' => 'string',
+        'message' => 'string',
+        'admin_only' => 'bool',
+        'required_privileges' => 'object[]',
+        'created_by_integration_id' => 'string',
+        'created_by_user_id' => 'string',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        'custom_field_set' => '\OpenAPI\Client\Model\CustomFieldSet',
-        'product_search_config_fields' => '\OpenAPI\Client\Model\ProductSearchConfigField'
+        'created_by_integration' => '\OpenAPI\Client\Model\Integration',
+        'created_by_user' => '\OpenAPI\Client\Model\User'
     ];
 
     /**
@@ -81,15 +82,16 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'name' => null,
-        'type' => null,
-        'config' => null,
-        'active' => null,
-        'custom_field_set_id' => null,
+        'status' => null,
+        'message' => null,
+        'admin_only' => null,
+        'required_privileges' => null,
+        'created_by_integration_id' => null,
+        'created_by_user_id' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
-        'custom_field_set' => null,
-        'product_search_config_fields' => null
+        'created_by_integration' => null,
+        'created_by_user' => null
     ];
 
     /**
@@ -120,15 +122,16 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'name' => 'name',
-        'type' => 'type',
-        'config' => 'config',
-        'active' => 'active',
-        'custom_field_set_id' => 'customFieldSetId',
+        'status' => 'status',
+        'message' => 'message',
+        'admin_only' => 'adminOnly',
+        'required_privileges' => 'requiredPrivileges',
+        'created_by_integration_id' => 'createdByIntegrationId',
+        'created_by_user_id' => 'createdByUserId',
         'created_at' => 'createdAt',
         'updated_at' => 'updatedAt',
-        'custom_field_set' => 'customFieldSet',
-        'product_search_config_fields' => 'productSearchConfigFields'
+        'created_by_integration' => 'createdByIntegration',
+        'created_by_user' => 'createdByUser'
     ];
 
     /**
@@ -138,15 +141,16 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'name' => 'setName',
-        'type' => 'setType',
-        'config' => 'setConfig',
-        'active' => 'setActive',
-        'custom_field_set_id' => 'setCustomFieldSetId',
+        'status' => 'setStatus',
+        'message' => 'setMessage',
+        'admin_only' => 'setAdminOnly',
+        'required_privileges' => 'setRequiredPrivileges',
+        'created_by_integration_id' => 'setCreatedByIntegrationId',
+        'created_by_user_id' => 'setCreatedByUserId',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
-        'custom_field_set' => 'setCustomFieldSet',
-        'product_search_config_fields' => 'setProductSearchConfigFields'
+        'created_by_integration' => 'setCreatedByIntegration',
+        'created_by_user' => 'setCreatedByUser'
     ];
 
     /**
@@ -156,15 +160,16 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'name' => 'getName',
-        'type' => 'getType',
-        'config' => 'getConfig',
-        'active' => 'getActive',
-        'custom_field_set_id' => 'getCustomFieldSetId',
+        'status' => 'getStatus',
+        'message' => 'getMessage',
+        'admin_only' => 'getAdminOnly',
+        'required_privileges' => 'getRequiredPrivileges',
+        'created_by_integration_id' => 'getCreatedByIntegrationId',
+        'created_by_user_id' => 'getCreatedByUserId',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
-        'custom_field_set' => 'getCustomFieldSet',
-        'product_search_config_fields' => 'getProductSearchConfigFields'
+        'created_by_integration' => 'getCreatedByIntegration',
+        'created_by_user' => 'getCreatedByUser'
     ];
 
     /**
@@ -225,15 +230,16 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['name'] = $data['name'] ?? null;
-        $this->container['type'] = $data['type'] ?? null;
-        $this->container['config'] = $data['config'] ?? null;
-        $this->container['active'] = $data['active'] ?? null;
-        $this->container['custom_field_set_id'] = $data['custom_field_set_id'] ?? null;
+        $this->container['status'] = $data['status'] ?? null;
+        $this->container['message'] = $data['message'] ?? null;
+        $this->container['admin_only'] = $data['admin_only'] ?? null;
+        $this->container['required_privileges'] = $data['required_privileges'] ?? null;
+        $this->container['created_by_integration_id'] = $data['created_by_integration_id'] ?? null;
+        $this->container['created_by_user_id'] = $data['created_by_user_id'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
-        $this->container['custom_field_set'] = $data['custom_field_set'] ?? null;
-        $this->container['product_search_config_fields'] = $data['product_search_config_fields'] ?? null;
+        $this->container['created_by_integration'] = $data['created_by_integration'] ?? null;
+        $this->container['created_by_user'] = $data['created_by_user'] ?? null;
     }
 
     /**
@@ -249,14 +255,18 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /^[0-9a-f]{32}$/.";
         }
 
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
         }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
+        if ($this->container['message'] === null) {
+            $invalidProperties[] = "'message' can't be null";
         }
-        if (!is_null($this->container['custom_field_set_id']) && !preg_match("/^[0-9a-f]{32}$/", $this->container['custom_field_set_id'])) {
-            $invalidProperties[] = "invalid value for 'custom_field_set_id', must be conform to the pattern /^[0-9a-f]{32}$/.";
+        if (!is_null($this->container['created_by_integration_id']) && !preg_match("/^[0-9a-f]{32}$/", $this->container['created_by_integration_id'])) {
+            $invalidProperties[] = "invalid value for 'created_by_integration_id', must be conform to the pattern /^[0-9a-f]{32}$/.";
+        }
+
+        if (!is_null($this->container['created_by_user_id']) && !preg_match("/^[0-9a-f]{32}$/", $this->container['created_by_user_id'])) {
+            $invalidProperties[] = "invalid value for 'created_by_user_id', must be conform to the pattern /^[0-9a-f]{32}$/.";
         }
 
         if ($this->container['created_at'] === null) {
@@ -298,7 +308,7 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     {
 
         if (!is_null($id) && (!preg_match("/^[0-9a-f]{32}$/", $id))) {
-            throw new \InvalidArgumentException("invalid value for $id when calling CustomField., must conform to the pattern /^[0-9a-f]{32}$/.");
+            throw new \InvalidArgumentException("invalid value for $id when calling Notification., must conform to the pattern /^[0-9a-f]{32}$/.");
         }
 
         $this->container['id'] = $id;
@@ -307,126 +317,155 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets name
+     * Gets status
      *
      * @return string
      */
-    public function getName()
+    public function getStatus()
     {
-        return $this->container['name'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets name
+     * Sets status
      *
-     * @param string $name name
+     * @param string $status status
      *
      * @return self
      */
-    public function setName($name)
+    public function setStatus($status)
     {
-        $this->container['name'] = $name;
+        $this->container['status'] = $status;
 
         return $this;
     }
 
     /**
-     * Gets type
+     * Gets message
      *
      * @return string
      */
-    public function getType()
+    public function getMessage()
     {
-        return $this->container['type'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets type
+     * Sets message
      *
-     * @param string $type type
+     * @param string $message message
      *
      * @return self
      */
-    public function setType($type)
+    public function setMessage($message)
     {
-        $this->container['type'] = $type;
+        $this->container['message'] = $message;
 
         return $this;
     }
 
     /**
-     * Gets config
-     *
-     * @return object|null
-     */
-    public function getConfig()
-    {
-        return $this->container['config'];
-    }
-
-    /**
-     * Sets config
-     *
-     * @param object|null $config config
-     *
-     * @return self
-     */
-    public function setConfig($config)
-    {
-        $this->container['config'] = $config;
-
-        return $this;
-    }
-
-    /**
-     * Gets active
+     * Gets admin_only
      *
      * @return bool|null
      */
-    public function getActive()
+    public function getAdminOnly()
     {
-        return $this->container['active'];
+        return $this->container['admin_only'];
     }
 
     /**
-     * Sets active
+     * Sets admin_only
      *
-     * @param bool|null $active active
+     * @param bool|null $admin_only admin_only
      *
      * @return self
      */
-    public function setActive($active)
+    public function setAdminOnly($admin_only)
     {
-        $this->container['active'] = $active;
+        $this->container['admin_only'] = $admin_only;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_set_id
+     * Gets required_privileges
      *
-     * @return string|null
+     * @return object[]|null
      */
-    public function getCustomFieldSetId()
+    public function getRequiredPrivileges()
     {
-        return $this->container['custom_field_set_id'];
+        return $this->container['required_privileges'];
     }
 
     /**
-     * Sets custom_field_set_id
+     * Sets required_privileges
      *
-     * @param string|null $custom_field_set_id custom_field_set_id
+     * @param object[]|null $required_privileges required_privileges
      *
      * @return self
      */
-    public function setCustomFieldSetId($custom_field_set_id)
+    public function setRequiredPrivileges($required_privileges)
+    {
+        $this->container['required_privileges'] = $required_privileges;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_by_integration_id
+     *
+     * @return string|null
+     */
+    public function getCreatedByIntegrationId()
+    {
+        return $this->container['created_by_integration_id'];
+    }
+
+    /**
+     * Sets created_by_integration_id
+     *
+     * @param string|null $created_by_integration_id created_by_integration_id
+     *
+     * @return self
+     */
+    public function setCreatedByIntegrationId($created_by_integration_id)
     {
 
-        if (!is_null($custom_field_set_id) && (!preg_match("/^[0-9a-f]{32}$/", $custom_field_set_id))) {
-            throw new \InvalidArgumentException("invalid value for $custom_field_set_id when calling CustomField., must conform to the pattern /^[0-9a-f]{32}$/.");
+        if (!is_null($created_by_integration_id) && (!preg_match("/^[0-9a-f]{32}$/", $created_by_integration_id))) {
+            throw new \InvalidArgumentException("invalid value for $created_by_integration_id when calling Notification., must conform to the pattern /^[0-9a-f]{32}$/.");
         }
 
-        $this->container['custom_field_set_id'] = $custom_field_set_id;
+        $this->container['created_by_integration_id'] = $created_by_integration_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_by_user_id
+     *
+     * @return string|null
+     */
+    public function getCreatedByUserId()
+    {
+        return $this->container['created_by_user_id'];
+    }
+
+    /**
+     * Sets created_by_user_id
+     *
+     * @param string|null $created_by_user_id created_by_user_id
+     *
+     * @return self
+     */
+    public function setCreatedByUserId($created_by_user_id)
+    {
+
+        if (!is_null($created_by_user_id) && (!preg_match("/^[0-9a-f]{32}$/", $created_by_user_id))) {
+            throw new \InvalidArgumentException("invalid value for $created_by_user_id when calling Notification., must conform to the pattern /^[0-9a-f]{32}$/.");
+        }
+
+        $this->container['created_by_user_id'] = $created_by_user_id;
 
         return $this;
     }
@@ -480,49 +519,49 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets custom_field_set
+     * Gets created_by_integration
      *
-     * @return \OpenAPI\Client\Model\CustomFieldSet|null
+     * @return \OpenAPI\Client\Model\Integration|null
      */
-    public function getCustomFieldSet()
+    public function getCreatedByIntegration()
     {
-        return $this->container['custom_field_set'];
+        return $this->container['created_by_integration'];
     }
 
     /**
-     * Sets custom_field_set
+     * Sets created_by_integration
      *
-     * @param \OpenAPI\Client\Model\CustomFieldSet|null $custom_field_set custom_field_set
+     * @param \OpenAPI\Client\Model\Integration|null $created_by_integration created_by_integration
      *
      * @return self
      */
-    public function setCustomFieldSet($custom_field_set)
+    public function setCreatedByIntegration($created_by_integration)
     {
-        $this->container['custom_field_set'] = $custom_field_set;
+        $this->container['created_by_integration'] = $created_by_integration;
 
         return $this;
     }
 
     /**
-     * Gets product_search_config_fields
+     * Gets created_by_user
      *
-     * @return \OpenAPI\Client\Model\ProductSearchConfigField|null
+     * @return \OpenAPI\Client\Model\User|null
      */
-    public function getProductSearchConfigFields()
+    public function getCreatedByUser()
     {
-        return $this->container['product_search_config_fields'];
+        return $this->container['created_by_user'];
     }
 
     /**
-     * Sets product_search_config_fields
+     * Sets created_by_user
      *
-     * @param \OpenAPI\Client\Model\ProductSearchConfigField|null $product_search_config_fields product_search_config_fields
+     * @param \OpenAPI\Client\Model\User|null $created_by_user created_by_user
      *
      * @return self
      */
-    public function setProductSearchConfigFields($product_search_config_fields)
+    public function setCreatedByUser($created_by_user)
     {
-        $this->container['product_search_config_fields'] = $product_search_config_fields;
+        $this->container['created_by_user'] = $created_by_user;
 
         return $this;
     }
