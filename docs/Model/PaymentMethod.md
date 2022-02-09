@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional]
 **plugin_id** | **string** |  | [optional]
+**handler_identifier** | **string** |  | [optional]
 **name** | **string** |  |
 **distinguishable_name** | **string** |  | [optional] [readonly]
 **description** | **string** |  | [optional]

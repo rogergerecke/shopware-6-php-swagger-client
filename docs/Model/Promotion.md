@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **valid_until** | **\DateTime** |  | [optional]
 **max_redemptions_global** | **int** |  | [optional]
 **max_redemptions_per_customer** | **int** |  | [optional]
+**priority** | **int** |  |
 **exclusive** | **bool** |  |
 **code** | **string** |  | [optional]
 **use_codes** | **bool** |  |

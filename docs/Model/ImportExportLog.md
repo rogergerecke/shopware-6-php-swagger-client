@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **username** | **string** |  | [optional]
 **profile_name** | **string** |  | [optional]
 **config** | **object** |  |
+**result** | **object** |  | [optional]
 **created_at** | **\DateTime** |  | [readonly]
 **updated_at** | **\DateTime** |  | [optional] [readonly]
 **user** | [**\OpenAPI\Client\Model\User**](User.md) |  | [optional]
