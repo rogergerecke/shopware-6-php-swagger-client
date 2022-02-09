@@ -1,5 +1,6 @@
 # OpenAPIClient-php Shopware 6.4.8.0 
 
+
 This endpoint reference contains an overview of all endpoints comprising the Shopware Admin API.
 
 For a better overview, all CRUD-endpoints are hidden by default. If you want to show also CRUD-endpoints
