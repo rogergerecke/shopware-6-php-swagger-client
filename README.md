@@ -1,4 +1,4 @@
-# OpenAPIClient-php Shopware 6.4.8.0
+# OpenAPIClient-php Shopware 6.4.8.0 
 
 This endpoint reference contains an overview of all endpoints comprising the Shopware Admin API.
 
