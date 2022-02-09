@@ -1,4 +1,4 @@
-# OpenAPIClient-php
+# OpenAPIClient-php Shopware 6.4.8.0 
 
 This endpoint reference contains an overview of all endpoints comprising the Shopware Admin API.
 
@@ -10,7 +10,7 @@ add the query parameter `type=jsonapi`.
 
 ### Requirements
 
-PHP 7.3 and later.
+PHP 7.4 and later.
 Should also work with PHP 8.0 but has not been tested.
 
 ### Composer
@@ -22,11 +22,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/rogergerecke/shopware-6-php-swagger-client.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "rogergerecke/shopware-6-php-swagger-client": "dev-main"
   }
 }
 ```
